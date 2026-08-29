@@ -16,7 +16,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Next.js template",
   description:
-    "Starter auth template with <log></log>in, register, forgot password, and reset password pages.",
+    "Starter auth template with login, register, forgot password, and reset password pages.",
+  themeColor: "#0f172a",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "MyApp",
+  },
 };
 
 export default function RootLayout({
