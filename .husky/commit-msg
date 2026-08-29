@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+message=$(cat "$1")
+
+if ! printf '%s\n' "$message" | grep -Eq '^(feat|fix|docs|style|refactor|test|chore|perf|ci|build)(\([a-zA-Z0-9._-]+\))?: .+'; then
+  echo "❌ Invalid commit message format. Use: type(scope): description"
+  echo "Example: feat(auth): add login flow"
+  exit 1
+fi
